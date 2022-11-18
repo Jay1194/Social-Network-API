@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Jay1194/Social-Network-API/issues"
   },
-  "homepage": "https://github.com/Jay1194/Social-Network-API#readme"
+  "homepage": "https://github.com/Jay1194/Social-Network-API#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.2"
+  }
 }
