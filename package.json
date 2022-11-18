@@ -1,0 +1,19 @@
+{
+  "name": "social-net",
+  "version": "1.0.0",
+  "description": "This app is a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list, made using Express.js for routing, a MongoDB database, and the Mongoose ODM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay1194/Social-Network-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jay1194/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/Jay1194/Social-Network-API#readme"
+}
