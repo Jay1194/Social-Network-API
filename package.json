@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Jay1194/Social-Network-API#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "validator": "^13.12.0"
   }
 }
