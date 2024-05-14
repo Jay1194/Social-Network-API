@@ -1,4 +1,5 @@
-const { Thought, User } = require('../models');
+const { User, Thought } = require('../models');
+const { Types } = require('mongoose');
 
 const thoughtController = {
   //Get all thoughts
@@ -46,7 +47,39 @@ const thoughtController = {
         res.json(dbUserData);
       })
       .catch(err => res.json(err));
-  },
+    },
+    //add reaction
+    addReaction({ params, body }, res) {
+      const { thoughtId } = params;
+      const newReaction = {
+        reactionId: new Types.ObjectId()
+      };
+      Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $push: { reactions: newReaction } },
+        { new: true }
+      )
+        .then(dbThoughtData => {
+          if (!dbThoughtData) {
+            res.status(404).json({ message: 'No thought found with this id!' });
+            return;
+          }
+          res.json(dbThoughtData);
+        })
+        .catch(err => res.json(err));
+    },
+    // remove reaction
+    removeReaction({ params }, res) {
+      const { thoughtId, reactionId } = params;
+      Thought.findOneAndUpdate(
+        { _id: thoughtId },
+        { $pull: { reactions: { _id: reactionId } } },
+        { new: true }
+      )
+        .then(dbThoughtData => res.json(dbThoughtData))
+        .catch(err => res.json(err));
+    },
+
   // remove Thought
   removeThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
@@ -68,7 +101,6 @@ const thoughtController = {
         res.json(dbUserData);
       })
       .catch(err => res.json(err));
-  }
-};
-
+  },
+}
 module.exports = thoughtController;

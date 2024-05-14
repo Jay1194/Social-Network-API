@@ -48,7 +48,7 @@ const userController = {
     User.findOneAndUpdate({ _id: params.id }, body, { new: true})
     .then(dbUserData => {
         if (!dbUserData) {
-            res.status(404).json({ message: 'No Useer found with this id!'
+            res.status(404).json({ message: 'No User found with this id!'
 });         
             return;
         }
@@ -67,7 +67,11 @@ const userController = {
         res.json(dbUserData);
     })
     .catch(err => res.status(400).json(err));
- }
-};
+ },
+ // Add a friend
+
+ // delete a friend
+
+}
 
 module.exports = userController;

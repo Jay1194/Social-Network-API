@@ -34,16 +34,13 @@ const UserSchema = new Schema({
       toJSON: {
         virtuals: true
       },
-      id: false
     }
   );
 
-// get total count of friends and replies on retrieval
+// get total count of friends 
 UserSchema.virtual('friendCount').get(function() {
     return this.friends.length;
   });
-
-
 
 const User = model('User', UserSchema);
 
