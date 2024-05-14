@@ -1,5 +1,8 @@
 # Project Name: Social Network API
 
+## Mock up
+![image](https://github.com/Jay1194/Social-Network-API/assets/105843570/258b288e-be30-45d3-ad21-75b51b84f1d5)
+
 ## Description
 This project is a RESTful API for a social network application. It allows users to create accounts, share their thoughts, add friends, and react to thoughts.
 
