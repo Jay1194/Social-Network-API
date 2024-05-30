@@ -1,4 +1,4 @@
-# Project Name: Social Network API
+# Social Network API
 
 ## Mock up
 ![image](https://github.com/Jay1194/Social-Network-API/assets/105843570/258b288e-be30-45d3-ad21-75b51b84f1d5)
